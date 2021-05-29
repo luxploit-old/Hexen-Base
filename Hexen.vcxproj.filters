@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_demo.cpp">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_draw.cpp">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_tables.cpp">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_widgets.cpp">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks.cpp">
+      <Filter>Hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassPointers.cpp" />
+    <ClCompile Include="CreatedHooks\hkPolyHook.cpp">
+      <Filter>Hooking\CreatedHooks</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatedHooks\hkDirectX.cpp">
+      <Filter>Hooking\CreatedHooks</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\pattern.cpp">
+      <Filter>Memory\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\vmt_hook.cpp">
+      <Filter>Memory\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Patterns.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatedHooks\hkGTA.cpp">
+      <Filter>Hooking\CreatedHooks</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatedHooks\hkWndProc.cpp">
+      <Filter>Hooking\CreatedHooks</Filter>
+    </ClCompile>
+    <ClCompile Include="Invoker.cpp">
+      <Filter>Native-Invoking</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.cpp">
+      <Filter>Script Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatedThreads\ctNative.cpp">
+      <Filter>Script Manager\CreatedThreads</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatedThreads\ctDX.cpp">
+      <Filter>Script Manager\CreatedThreads</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="fonts.hpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Hooking">
+      <UniqueIdentifier>{aef402a3-83cf-415f-9a6e-175aa7b88281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooking\CreatedHooks">
+      <UniqueIdentifier>{85a7f6d8-9355-408f-acd7-e0e23aa86f95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{017e8478-4c6b-44eb-917c-6ec0ec2bf579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory\Helpers">
+      <UniqueIdentifier>{5e2b45f0-aff1-47e1-b4e4-7d4a340ff3e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{5f3ff2f0-b8ca-4f4c-ae9d-f9f7ca84c4f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\Dear ImGui">
+      <UniqueIdentifier>{8d1d471f-e4d0-4a63-aa0f-4f10e614d53f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GTA-Rage">
+      <UniqueIdentifier>{d65424c6-3c00-4eb3-b605-35e7d434e984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Native-Invoking">
+      <UniqueIdentifier>{0695194d-942a-4896-aaf0-47e2da467af0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Manager">
+      <UniqueIdentifier>{0c14fa6a-f0bd-4406-af54-d3f2ba2a8b85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{ad92c6c5-f8ad-407e-a077-780eda117d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Manager\CreatedThreads">
+      <UniqueIdentifier>{f9be08ac-4839-4c32-b1c2-347ca311a0b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ImGui\imstb_truetype.h">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imconfig.h">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui.h">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_dx11.h">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_win32.h">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_internal.h">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_rectpack.h">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_textedit.h">
+      <Filter>Renderer\Dear ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.hpp">
+      <Filter>Hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassPointers.hpp" />
+    <ClInclude Include="CreatedHooks\hooktables.hpp">
+      <Filter>Hooking\CreatedHooks</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\vmt_hook.hpp">
+      <Filter>Memory\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\pattern.hpp">
+      <Filter>Memory\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Patterns.hpp">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="GTA-Rage\ScrNative.hpp">
+      <Filter>GTA-Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="Crossmap.hpp">
+      <Filter>Native-Invoking</Filter>
+    </ClInclude>
+    <ClInclude Include="Invoker.hpp">
+      <Filter>Native-Invoking</Filter>
+    </ClInclude>
+    <ClInclude Include="Natives.hpp">
+      <Filter>Native-Invoking</Filter>
+    </ClInclude>
+    <ClInclude Include="return_spoof.hpp">
+      <Filter>Native-Invoking</Filter>
+    </ClInclude>
+    <ClInclude Include="GTA-Rage\Vector.hpp">
+      <Filter>GTA-Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="Script.hpp">
+      <Filter>Script Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.hpp">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="CreatedThreads\threadtable.hpp">
+      <Filter>Script Manager\CreatedThreads</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="return_spoof.asm">
+      <Filter>Native-Invoking</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
