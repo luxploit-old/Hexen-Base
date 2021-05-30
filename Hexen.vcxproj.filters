@@ -69,6 +69,15 @@
     <ClCompile Include="fonts.hpp">
       <Filter>Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="fiber_pool.cpp">
+      <Filter>Script Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="script_mgr.cpp">
+      <Filter>Script Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerManager.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Hooking">
@@ -175,6 +184,15 @@
     </ClInclude>
     <ClInclude Include="Renderer.hpp">
       <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="fiber_pool.hpp">
+      <Filter>Script Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="script_mgr.hpp">
+      <Filter>Script Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerManager.hpp">
+      <Filter>Helpers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
 #pragma once
 #include "hooktables.hpp"
+#include "../CreatedThreads/threadtable.hpp"
 
 function_types::tGetNumberOfEvents oGetNumberOfEvents;
 function_types::tGetLabelText oGetLabelText;
@@ -13,9 +14,7 @@ const char* hkGTA::hkGetLabelText(PVOID unk, const char* label) {
 }
 
 int32_t hkGTA::hkGetNumberOfEvents(int32_t unk) {
-	ClassPointers::cHelpers->gMainFiber = IsThreadAFiber() ? GetCurrentFiber() : ConvertThreadToFiber(nullptr);
-	for (auto ss : ClassPointers::cHelpers->vScripts)
-		ss->Tick();
+	ClassPointers::cScripts->tick();
 	return oGetNumberOfEvents(unk);
 }
 

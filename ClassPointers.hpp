@@ -5,6 +5,9 @@
 #include "Invoker.hpp"
 #include "Helpers.hpp"
 #include "Renderer.hpp"
+#include "script_mgr.hpp"
+#include "fiber_pool.hpp"
+#include "TimerManager.hpp"
 
 /*This is a helper function to call printf with a new line*/
 /*Yes i am that lazy, but this is a UC base, not like i care*/
@@ -20,6 +23,9 @@ namespace ClassPointers {
 	extern std::unique_ptr<Invoker> cInvoker;
 	extern std::unique_ptr<Helpers> cHelpers;
 	extern std::unique_ptr<DirectRender> cDX;
+	extern std::unique_ptr<script_mgr> cScripts;
+	extern std::unique_ptr<fiber_pool> cPool;
+	extern std::unique_ptr<TimerManager> cTimerMgr;
 
 	void ResetPointers();
 }

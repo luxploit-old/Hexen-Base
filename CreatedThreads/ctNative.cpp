@@ -3,6 +3,8 @@
 
 /*Main Thread for Executing Natives*/
 void CreatedThreads::NativeThread() {
-
-	ClassPointers::cHelpers->gCurrentScript->Wait(0);
+	for (;;) {
+		/*Call Graphics Shit Here ig*/
+		script::get_current()->yield();
+	}	
 }

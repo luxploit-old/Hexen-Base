@@ -37,7 +37,6 @@ bool __stdcall DllMain(HMODULE hModule, DWORD callrs, LPVOID) {
 				freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);		/*Opens the Standard Output Port*/
 			SetConsoleTextAttribute(GetStdHandle(static_cast<DWORD>(-11)), 0x0004);			/*Colors the Console Red for the Output Handle*/
 
-
 			printfnl("Welcome to Hexen Base");
 			printfnl("Hexen Status Code: [102 -> Processing]");								/*All Status Codes are HTML Status Codes*/
 
@@ -54,22 +53,21 @@ bool __stdcall DllMain(HMODULE hModule, DWORD callrs, LPVOID) {
 
 			ClassPointers::cDX->InitRender();												/*Starts Up the DirectX Render Function*/
 
-			ClassPointers::cHelpers->add_script(CreatedThreads::NativeThread, "Native");	/*Launches Fiber for Executing Natives, you can launch more than one btw*/
+			ClassPointers::cPool->add_number_of_fibers(10);									/*Adds 10 Fibers for Executing GTA Native Code*/
+			ClassPointers::cScripts->add_script(std::make_unique<script>(&CreatedThreads::NativeThread));
 
 			ClassPointers::cHooks->TriggerHook(true);										/*Creates all Execution Hooks*/
 
 			printfnl("Hexen Status Code: [226 -> IM Used]");
 			do {
-				if (GetAsyncKeyState(VK_F10) & 0x8000)										/*Checks if Key is/was pressed to UnInject Hexen*/
+				if (GetAsyncKeyState(VK_F10))										/*Checks if Key is/was pressed to UnInject Hexen*/
 					bUnInject = true;
 				std::this_thread::sleep_for(30ms);
 			} while (!bUnInject);															/*Sleeps Thread while DLL should not uninject*/
 		
 			printfnl("Unloading from the Grand Theft Auto V Module");
 
-			ClassPointers::cHooks->TriggerHook(false);										/*Removes all Execution Hooks*/
-
-			ClassPointers::cHelpers->remove_scripts();										/*Deletes All Scripts Created On Startup*/
+			ClassPointers::cHooks->TriggerHook(false);										/*Removes all Execution Hooks*/										/*Deletes All Scripts Created On Startup*/
 
 			ClassPointers::ResetPointers();													/*Resets all Unqiue Pointer Created On Inject*/
 
@@ -86,3 +84,13 @@ bool __stdcall DllMain(HMODULE hModule, DWORD callrs, LPVOID) {
 	return true;
 }
 
+/*	Credits for the entire Base:
+*
+*	O² - Code Review
+*	Ari - Code Review and Feedback
+*	Chrizzi - Pattern Scanner, Code Review and Improvment Ideas
+*	SpankerIncrease - BBv2 Script System (sorry :worry:)	
+*	Pocakking - BigHookv5 Timer System, BBv1 Invoker and the idea for ClassPointers (sorry :worry:)	
+*	Lifix - Giving me the idea for this shit also Feedback
+*	
+*/
